@@ -1,0 +1,19 @@
+/* -------------ADD ITEM----------------- */
+.Add-item {
+    height: 6.154vh;
+  }
+  
+  .Add-item label {
+    width: 58vw;
+    font-size: 2.5vh;
+    padding-bottom: 0.5vh;
+    margin-left: 2vw;
+    color: #010701;
+    border-bottom: thin solid gray;
+  }
+  .Add-item input {
+    width: 34vw;
+    height: 4.7vh;
+    margin: 0 3vw;
+    border-radius: 2vw;
+  }

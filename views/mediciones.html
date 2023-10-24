@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/leaf-favicon.svg" type="image/x-icon">
+    <title>Control de Cultivo</title>
+</head>
+<body class="flx-col">
+    <header class="flx-row">
+        <h1 class="flx-col">Primer Cultivo</h1>
+        <a href="../"><img src="img/leaf-logo.svg" alt="logo"></a>
+    </header>
+    <section class="info-section flx-row">
+        <select id="section-selector">
+            <option value="0">Mediciones</option>
+            <option value="1">Agregados</option>
+        </select>
+        <select id="state-selector">
+            <option value="0">Vegetativo</option>
+            <option value="1">Pre-Flora</option>
+            <option value="2">Floracion</option>
+        </select>
+    </section>
+    <form method="post" action="/measureForm" class="Measure-Container flx-row">
+        <div class="Measure-item flx-col">
+            <label for="inp-pH">pH</label>
+            <input type="number" name="pH" id="inp-pH" placeholder="pH">
+        </div>
+        <div class="Measure-item flx-col">
+            <label for="inp-EC">E.C</label>
+            <input type="number" name="EC" id="inp-EC" placeholder="E.C">
+        </div>
+        <div class="Measure-item flx-col">
+            <label for="inp-NdAgua">Nivel de Agua (cm)</label>
+            <input type="number" name="nivelDeAgua" id="inp-NdAgua" placeholder="Nivel de Agua">
+        </div>
+        <div class="Measure-item flx-col">
+            <label for="inp-Humedad">Humedad (%)</label>
+            <input type="number" name="humedad" id="inp-Humedad" placeholder="Humedad">
+        </div>
+        <div class="Measure-item flx-col">
+            <label for="inp-TempOut">Temperatura OUT (ºC)</label>
+            <input type="number" name="tempOut" id="inp-TempOut" placeholder="Temp. OUT">
+        </div>
+        <div class="Measure-item flx-col">
+            <label for="inp-TempIN">Temperatura IN (ºC)</label>
+            <input type="number" name="tempIn" id="inp-TempIN" placeholder="Temp. IN">
+        </div>
+        <div class="Measure-item flx-col">
+            <label for="inp-HrDeLuz">Horas de Luz (hs)</label>
+            <input type="number" name="horasDeLuz" id="inp-HrDeLuz" placeholder="Horas Luz">
+        </div>
+        <div class="boolean-options flx-row">
+            <label for="chbx-Ventilador">Ventilador</label>
+            <input type="checkbox" name="ventilador" id="chbx-Ventilador">
+            <label for="chbx-Cool-Ext">Cool. Ext</label>
+            <input type="checkbox" name="coolExt" id="chbx-Cool-Ext">
+            <label for="chbx-Limpieza">Limpieza</label>
+            <input type="checkbox" name="limpieza" id="chbx-Limpieza">
+            <label for="chbx-Cool-Int">Cool. Int</label>
+            <input type="checkbox" name="coolInt" id="chbx-Cool-Int">
+        </div>
+        <div class="note-Content flx-col">
+            <label for="inp-observaciones">Observaciones</label>
+            <input type="text" name="Observaciones" id="inp-observaciones">
+        </div>
+        <input class="btn-submit" type="submit" value="ENVIAR" id="btn-submit">
+    </form>
+    <script src="/mediciones.js"></script>
+</body>
+</html>
