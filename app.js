@@ -9,7 +9,9 @@ const app = express()
 let pathPublic = path.resolve("public")
 
 app.use(express.static(pathPublic)) // establece cual es la carpeta estatica para acceder con rutas alternativas, por ejemplo desde los html
-app.use(express.json());
+
+// Analizar datos del formulario
+app.use(express.urlencoded({ extended: false }));
 const PORT = 3030
 //--------------PATHS------------
 
@@ -31,8 +33,11 @@ app.get("/mediciones", (req,res) => res.sendFile(pathMediciones))
 app.get("/agregados", (req,res) => res.sendFile(pathAgregados))
 app.get("/mediciones.js", (req,res) => res.sendFile(pathMedicionesJS))
 app.post("/measureForm", (req,res) => {
+    const respuesta = req.body
     
-    console.log(req.body);
+    console.log(respuesta);
+    res.send(console.log("LISTO"))
+
 
 })
 
